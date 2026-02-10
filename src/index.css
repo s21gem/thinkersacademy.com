@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Luxury Dark (Bangla course landing) */
+    --background: 0 0% 3.5%;
+    --foreground: 0 0% 98%;
+
+    /* Premium palette */
+    --premium: 46 74% 54%; /* Gold */
+    --premium-foreground: 0 0% 8%;
+    --metal: 0 0% 78%; /* Silver */
+    --metal-foreground: 0 0% 10%;
+    --cta: 0 100% 33%; /* Deep Red: #a70000 */
+    --cta-foreground: 0 0% 98%;
+
+    /* Typography (Bangla-first, luxury contrast) */
+    --font-display: "Noto Serif Bengali", "Hind Siliguri", "Noto Sans Bengali", ui-serif;
+    --font-body: "Noto Sans Bengali", "Hind Siliguri", ui-sans-serif;
+
+    /* Effects */
+    --shadow-lux: 0 18px 55px -22px hsl(var(--premium) / 0.35);
+    --shadow-cta: 0 18px 55px -22px hsl(var(--cta) / 0.45);
+    --gradient-hero: radial-gradient(1000px circle at 18% 12%, hsl(var(--premium) / 0.18), transparent 55%),
+      radial-gradient(900px circle at 82% 28%, hsl(var(--cta) / 0.16), transparent 56%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--foreground) / 0.04), hsl(var(--foreground) / 0.02));
+
+    --card: 0 0% 6.5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary maps to Gold for highlight + links */
+    --primary: var(--premium);
+    --primary-foreground: var(--premium-foreground);
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 72%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: var(--premium);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep dark theme identical (page is always luxury-dark) */
+    --background: 0 0% 3.5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6.5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: var(--premium);
+    --primary-foreground: var(--premium-foreground);
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 72%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: var(--premium);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .lux-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .lux-section {
+    @apply py-14 sm:py-20;
+  }
+
+  .lux-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-lux);
+    @apply rounded-xl border;
+  }
+
+  /* Card hover micro-interaction (premium, calm) */
+  .lux-card-hover {
+    @apply transition-[transform,opacity,box-shadow] duration-200 ease-out;
+  }
+  .lux-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 70px -28px hsl(var(--premium) / 0.42);
+  }
+  .lux-card-hover:focus-within {
+    box-shadow: 0 22px 70px -28px hsl(var(--premium) / 0.42);
+  }
+
+  .lux-divider {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--metal) / 0.5), transparent);
+  }
+
+  .lux-gold {
+    color: hsl(var(--premium));
+  }
+
+  .lux-number {
+    @apply font-extrabold tracking-tight;
+  }
+
+  /* Bangla highlight: gold + subtle underline accent */
+  .lux-highlight {
+    position: relative;
+    display: inline-block;
+  }
+  .lux-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.18em;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--premium) / 0.85), transparent);
+    opacity: 0.9;
+  }
+
+  /* Typography hierarchy helpers */
+  .lux-h1 {
+    @apply font-display font-extrabold tracking-[0.02em] leading-[1.06];
+  }
+  .lux-h2 {
+    @apply font-display font-extrabold tracking-[0.01em] leading-[1.12];
+  }
+  .lux-sub {
+    @apply font-medium leading-[1.7];
+  }
+  .lux-body {
+    @apply leading-[1.85];
+  }
+
+  /* Entrance presets (one-time via IntersectionObserver) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 260ms ease-out, opacity 240ms ease-out;
+    will-change: transform, opacity;
+  }
+  .reveal[data-state="in"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-fade {
+    opacity: 0;
+    transition: opacity 240ms ease-out;
+  }
+  .reveal-fade[data-state="in"] {
+    opacity: 1;
+  }
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: transform 260ms ease-out, opacity 240ms ease-out;
+    will-change: transform, opacity;
+  }
+  .reveal-scale[data-state="in"] {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Hero one-time load animations */
+  .hero-line-anim-1 {
+    animation: fade-up-sm 260ms ease-out both;
+  }
+  .hero-line-anim-2 {
+    animation: fade-up-sm 260ms ease-out both;
+    animation-delay: 110ms;
+  }
+  .hero-line-anim-3 {
+    animation: fade-up-sm 260ms ease-out both;
+    animation-delay: 220ms;
+  }
+  .hero-sub-anim {
+    animation: fade-in 240ms ease-out both;
+    animation-delay: 220ms;
+  }
+  .hero-pop-anim {
+    animation: scale-pop 260ms ease-out both;
+    animation-delay: 260ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-fade,
+    .reveal-scale,
+    .hero-line-anim-1,
+    .hero-line-anim-2,
+    .hero-line-anim-3,
+    .hero-sub-anim,
+    .hero-pop-anim {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  .hero-surface {
+    background: var(--gradient-hero);
+  }
+
+  .hero-spotlight {
+    --spot-x: 60%;
+    --spot-y: 24%;
+    position: relative;
+  }
+  .hero-spotlight::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    pointer-events: none;
+    background: radial-gradient(700px circle at var(--spot-x) var(--spot-y), hsl(var(--premium) / 0.20), transparent 55%);
+    opacity: 0.9;
+    transition: opacity 250ms ease;
+  }
+
+  /*
+    Abstract business/system pattern layer (global, behind particles).
+    - Uses currentColor so we can theme via HSL tokens.
+    - Intentionally very subtle to avoid competing with content.
+  */
+  .lux-pattern-layer {
+    /* Note: background-image SVG cannot inherit `currentColor` from CSS reliably */
+    opacity: 0.22;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='hsl(0%200%2078%25%20/%200.18)' stroke-width='1'%3E%3Cpath d='M20 40H200M20 110H200M20 180H200' opacity='.55'/%3E%3Cpath d='M40 20V200M110 20V200M180 20V200' opacity='.35'/%3E%3Cpath d='M40 40L110 110L180 40M40 180L110 110L180 180' opacity='.28'/%3E%3C/g%3E%3Cg fill='hsl(0%200%2078%25%20/%200.18)'%3E%3Ccircle cx='40' cy='40' r='1.4'/%3E%3Ccircle cx='110' cy='110' r='1.4'/%3E%3Ccircle cx='180' cy='40' r='1.4'/%3E%3Ccircle cx='40' cy='180' r='1.4'/%3E%3Ccircle cx='180' cy='180' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 220px 220px;
+    background-repeat: repeat;
+    background-position: center;
+    filter: blur(0.15px);
+    transform: translateZ(0);
+    will-change: opacity;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lux-pattern-layer {
+      opacity: 0.08;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-spotlight::before {
+      transition: none;
+    }
+  }
+
+  /* Subtle CTA indicator arrow (premium, calm) */
+  @keyframes lux-arrow-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(6px);
+      opacity: 1;
+    }
+  }
+
+  .lux-arrow-bounce {
+    animation: lux-arrow-bounce 1.2s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lux-arrow-bounce {
+      animation: none !important;
+    }
+  }
+}

@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>২ দিনের লাইভ কোর্স — হাই-ভ্যালু প্রোডাক্ট</title>
+
+    <!--
+      IMPORTANT (copy/paste hosting note)
+      - This file intentionally keeps your existing class names (lux-*, hero-*, reveal-*).
+      - For it to look identical, you MUST load your compiled CSS that contains Tailwind + your tokens.
+      - If you host outside this project, replace the href below with your deployed CSS bundle.
+    -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+
+  <body class="min-h-screen bg-background text-foreground">
+    <!-- BACKGROUND LAYER ORDER (Strict): Base (body) → Pattern (z-[1]) → Particles (z-[2]) → Content (z-10) -->
+
+    <!-- PATTERN LAYER (between glow & particles) -->
+    <div class="lux-pattern-layer" aria-hidden="true"></div>
+
+    <!-- PARTICLE LAYER (React canvas version lives in PremiumParticleLayer.tsx)
+         For standalone hosting, you can either:
+         1) Re-implement that canvas script here, or
+         2) Keep this placeholder and add your own particle system.
+    -->
+    <div class="lux-particles-layer" aria-hidden="true"></div>
+
+    <div class="relative z-10">
+      <!-- Sticky CTA (mobile-only) is React logic (useMobileStickyCta). Standalone HTML placeholder: -->
+      <!-- <div id="sticky-cta-root"></div> -->
+
+      <!-- ========================= -->
+      <!-- SECTION 01: HERO -->
+      <!-- ========================= -->
+      <header id="hero" class="hero-surface hero-spotlight relative overflow-hidden">
+        <div class="lux-container pb-10 pt-16 sm:pb-16 sm:pt-20">
+          <div class="mx-auto max-w-3xl text-center">
+            <div class="mb-5 flex flex-wrap items-center justify-center gap-2 hero-pop-anim">
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-3 py-1 text-xs font-semibold tracking-[0.02em]"
+              >
+                <!-- icon placeholder -->
+                ২ দিনের লাইভ কোর্স
+              </span>
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-metal/35 bg-secondary/40 px-3 py-1 text-xs font-semibold tracking-[0.02em] text-muted-foreground"
+              >
+                <!-- icon placeholder -->
+                Membership Limited
+              </span>
+            </div>
+
+            <h1 class="lux-h1 text-balance text-[2.65rem] sm:text-6xl">
+              <span class="hero-line-anim-1 block text-3xl sm:text-5xl">হাই-ভ্যালু প্রোডাক্টের গেম খেলুন</span>
+              <span class="hero-line-anim-2 block my-[11px] text-3xl sm:text-5xl">আপনার টাকাকে কর্মী বানান</span>
+            </h1>
+
+            <p class="lux-sub hero-sub-anim mt-5 text-balance text-base text-muted-foreground sm:text-lg">
+              বিজনেসে আপনার প্রোডাক্ট কী — সেটা বড় বিষয় না।
+              <br />
+              আপনি প্রোডাক্টটাকে মানুষের সামনে কীভাবে প্রেজেন্ট ও মার্কেটিং করছেন — সেটাই আসল বিষয়।
+            </p>
+
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row hero-pop-anim">
+              <a
+                href="#enroll"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] hover:shadow-[var(--shadow-cta)] active:scale-[0.95] h-12 rounded-xl px-7"
+              >
+                এনরোল করুন এখনই
+              </a>
+
+              <div class="relative overflow-hidden rounded-xl border border-primary/30 bg-primary/10 px-5 py-3">
+                <div class="absolute inset-0 opacity-30">
+                  <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-sheen"></div>
+                </div>
+                <div class="relative">
+                  <div class="text-xs text-muted-foreground">Limited Time Offer</div>
+                  <div class="text-lg font-extrabold">
+                    <span class="lux-gold lux-number">মাত্র ১৯০ টাকায়</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-xs text-muted-foreground">Membership Limited</p>
+          </div>
+
+          <div class="mt-10 sm:mt-14">
+            <div class="lux-divider" aria-hidden="true"></div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- ========================= -->
+        <!-- SECTION 02: PROBLEM AWARENESS / MINDSET SHIFT -->
+        <!-- ========================= -->
+        <section class="lux-section">
+          <div class="lux-container">
+            <div class="reveal" data-state="out">
+              <div class="mx-auto max-w-3xl">
+                <p class="lux-body text-lg sm:text-xl">
+                  সব ধনী মানুষরা একটা <span class="bangla-highlight">সিক্রেট</span> জানে—
+                  <br />
+                  ধনী হওয়া মানে শুধু <span class="bangla-highlight">ইনকাম</span> না,
+                  <br />
+                  বরং ইনকাম থেকে এমন একটা <span class="bangla-highlight">সিস্টেম</span> বানানো
+                  <br />
+                  যেখানে টাকা আবার নতুন টাকার জন্ম দেয়।
+                </p>
+                <p class="lux-body mt-6 text-base text-muted-foreground sm:text-lg">
+                  আমরা প্রতিদিন অক্লান্ত পরিশ্রম করছি…
+                  <br />
+                  অথচ আমাদের টাকা বসে বসে ঘুমাচ্ছে।
+                  <br />
+                  কি অদ্ভুত, তাই না?
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02.1: INLINE CTA (mobile-only in React) -->
+        <section id="inline-cta-problem" class="sm:hidden">
+          <div class="lux-container">
+            <div class="lux-card border-primary/20 bg-secondary/25 p-4 my-0 py-[23px]">
+              <div class="flex items-center justify-between gap-4">
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold tracking-[0.01em]">আপনি প্রস্তুত?</p>
+                  <p class="mt-1 whitespace-normal text-xs leading-snug text-muted-foreground my-0">
+                    এখনই এনরোল করে আপনার ফোকাস লক করুন।
+                  </p>
+                </div>
+                <a
+                  href="#enroll"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] active:scale-[0.95] h-10 shrink-0 rounded-xl px-4"
+                >
+                  এনরোল — ১৯০ টাকা
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 03: BODY vs MONEY COMPARISON -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="reveal-scale" data-state="out">
+                <div class="lux-card lux-card-hover border-metal/20">
+                  <div class="p-6">
+                    <h3 class="lux-h2 text-xl tracking-[0.01em]">শরীর দিয়ে আয় করলে —</h3>
+                    <div class="mt-4 text-muted-foreground">
+                      <ul class="grid gap-3">
+                        <li>শরীর যতটুকু পারে, ততটুকুই আয়</li>
+                        <li>যত বেশি ঘাম, তত বেশি ক্লান্তি</li>
+                        <li>শরীর একদিন ভেঙে পড়বে — আয়ও থেমে যাবে</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reveal-scale" data-state="out">
+                <div class="lux-card lux-card-hover border-primary/25">
+                  <div class="p-6">
+                    <h3 class="lux-h2 text-xl tracking-[0.01em]">টাকা দিয়ে আয় করলে —</h3>
+                    <div class="mt-4 text-muted-foreground">
+                      <ul class="grid gap-3">
+                        <li>টাকা ক্লান্ত হয় না</li>
+                        <li>টাকা ছুটি নেয় না</li>
+                        <li>টাকা ঘুমায় না</li>
+                        <li>টাকা বুড়ো হয় না</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal-fade mt-7 text-center text-lg font-extrabold sm:text-xl" data-state="out">
+              <span class="lux-gold lux-highlight">টাকা থামে না।</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 04: HIGH-VALUE PRODUCT CONCEPT -->
+        <!-- ========================= -->
+        <section class="lux-section">
+          <div class="lux-container">
+            <div class="reveal" data-state="out">
+              <div class="mx-auto max-w-3xl text-center">
+                <p class="lux-body text-lg sm:text-xl">
+                  আপনি যদি টাকাকে কর্মীর মতো ব্যবহার করতে চান
+                  <br />
+                  এবং টাকা দিয়ে আরও টাকা বানাতে চান—
+                  <br />
+                  তাহলে আপনাকে খেলতে হবে
+                  <br />
+                  <span class="bangla-highlight">হাই-ভ্যালু প্রোডাক্টের গেম</span>।
+                </p>
+                <p class="lux-body mt-6 text-base text-muted-foreground sm:text-lg">
+                  কারণ হাই-ভ্যালু প্রোডাক্ট মানে—
+                  <br />
+                  <span class="lux-gold font-bold">অল্প বিক্রিতেই বড় প্রফিট।</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 05: COURSE INTRO (Offer Reveal) -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="reveal-scale" data-state="out">
+              <div class="lux-card border-primary/25">
+                <div class="p-6 sm:p-10">
+                  <div class="mx-auto max-w-3xl text-center">
+                    <div class="text-2xl font-extrabold sm:text-3xl">
+                      <span class="lux-gold lux-number lux-highlight">মাত্র ১৯০ টাকায়</span>
+                    </div>
+                    <p class="mt-2 text-muted-foreground">এই ২ দিনের লাইভ কোর্সে আমরা শিখবো—</p>
+                    <ul class="mx-auto mt-6 grid max-w-xl gap-3 text-left text-muted-foreground">
+                      <li class="flex gap-3">
+                        <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                        কীভাবে হাই-ভ্যালু প্রোডাক্টের বিজনেস দাঁড় করাতে হয়
+                      </li>
+                      <li class="flex gap-3">
+                        <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                        কীভাবে টাকাকে কর্মী হিসেবে কাজ করাতে হয়
+                      </li>
+                    </ul>
+                    <p class="mt-6 text-base font-semibold">এটা খরচ না — এটা <span class="lux-gold">সিদ্ধান্ত</span>।</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 06: AUTHORITY & CURIOSITY -->
+        <!-- ========================= -->
+        <section class="lux-section">
+          <div class="lux-container">
+            <div class="reveal" data-state="out">
+              <div class="mx-auto max-w-3xl">
+                <p class="lux-body text-lg sm:text-xl">
+                  বাংলাদেশের সবচেয়ে বড় বড় প্রতিষ্ঠানগুলোর
+                  <br />
+                  ফাউন্ডারদের ব্যাকগ্রাউন্ড দেখুন—
+                </p>
+                <p class="lux-body mt-4 text-base text-muted-foreground sm:text-lg">
+                  তারা সবাই ধনী পরিবার থেকে আসেনি,
+                  <br />
+                  শুরুতে তাদের কাছে অনেক টাকা ছিল না।
+                </p>
+                <p class="mt-6 text-lg font-semibold sm:text-xl">
+                  তাহলে রহস্যটা কোথায়?
+                  <br />
+                  রহস্যটা আছে <span class="lux-gold">সিস্টেম + স্কিলে</span>।
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 07: DECISION SECTION (Option Cards) -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="reveal-scale" data-state="out">
+                <div class="lux-card lux-card-hover border-metal/20">
+                  <div class="p-6">
+                    <h3 class="lux-h2 text-xl tracking-[0.01em]">Option 01 ❌</h3>
+                    <div class="mt-4 text-muted-foreground">
+                      <ul class="grid gap-2">
+                        <li>বড় পুঁজি খুঁজে খুঁজে খাটুনি</li>
+                        <li>ক্লান্তি</li>
+                        <li>ধীরগতির সাফল্য</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reveal-scale" data-state="out">
+                <div
+                  class="lux-card lux-card-hover relative overflow-hidden border-foreground/20 bg-primary/5 backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary/24 before:via-primary/12 before:to-transparent before:opacity-100 after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-foreground/20"
+                >
+                  <div class="p-6">
+                    <h3 class="lux-h2 text-xl tracking-[0.01em] text-primary">Option 02 ✅</h3>
+                    <div class="mt-4 text-muted-foreground">
+                      <ul class="grid gap-2">
+                        <li>নিজের টাকাকে কর্মী বানানো</li>
+                        <li>স্মার্টভাবে জীবন খেলা</li>
+                      </ul>
+                      <a
+                        href="#enroll"
+                        class="mt-5 w-full inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] active:scale-[0.95] h-11 rounded-xl px-8"
+                      >
+                        এনরোল করুন — মাত্র ১৯০ টাকা
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 07.1: INLINE CTA (mobile-only in React) -->
+        <section id="inline-cta-decision" class="sm:hidden">
+          <div class="lux-container">
+            <div class="lux-card border-primary/20 bg-secondary/25 p-4 my-0 py-[23px]">
+              <div class="flex items-center justify-between gap-4">
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold tracking-[0.01em]">এটাই আপনার টার্ন</p>
+                  <p class="mt-1 whitespace-normal text-xs leading-snug text-muted-foreground my-0">
+                    এখনই এনরোল করে আপনার ফোকাস লক করুন।
+                  </p>
+                </div>
+                <a
+                  href="#enroll"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] active:scale-[0.95] h-10 shrink-0 rounded-xl px-4"
+                >
+                  এনরোল — ১৯০ টাকা
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 08: PAIN POINT CHECKLIST -->
+        <!-- ========================= -->
+        <section class="lux-section">
+          <div class="lux-container">
+            <div class="reveal" data-state="out">
+              <div class="mx-auto max-w-3xl">
+                <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">আপনার কি এগুলো হচ্ছে?</h2>
+                <div class="mt-6 grid gap-3 text-muted-foreground">
+                  <div class="lux-card-hover flex items-start gap-3 rounded-lg border border-border bg-secondary/30 p-4">
+                    <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                    <p>আমার কাছে পুঁজি নেই</p>
+                  </div>
+                  <div class="lux-card-hover flex items-start gap-3 rounded-lg border border-border bg-secondary/30 p-4">
+                    <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                    <p>বিজনেস শুরু করতে অনেক টাকা লাগে</p>
+                  </div>
+                  <div class="lux-card-hover flex items-start gap-3 rounded-lg border border-border bg-secondary/30 p-4">
+                    <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                    <p>প্রোডাক্ট আছে কিন্তু সেল হচ্ছে না</p>
+                  </div>
+                  <div class="lux-card-hover flex items-start gap-3 rounded-lg border border-border bg-secondary/30 p-4">
+                    <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                    <p>টাকা ইনকাম হয়, কিন্তু টাকা আমার জন্য কাজ করে না</p>
+                  </div>
+                </div>
+                <p class="mt-6 text-lg font-extrabold"><span class="lux-gold">এক কাপ কফির দামে সমাধান নিন।</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 09: COURSE CURRICULUM -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="mx-auto max-w-4xl">
+              <div class="reveal-fade" data-state="out">
+                <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">কোর্স কারিকুলাম</h2>
+              </div>
+              <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-primary/25">
+                    <div class="p-6">
+                      <h3 class="flex items-center gap-3 text-xl"><span class="lux-gold">🔥</span> Day 01 🔥</h3>
+                      <div class="mt-4 text-muted-foreground">
+                        <p class="font-semibold text-foreground">How to Build High Value Product Business</p>
+                        <p class="mt-2">কম পুঁজিতে হাই-ভ্যালু প্রোডাক্ট তৈরি কৌশল</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-metal/20">
+                    <div class="p-6">
+                      <h3 class="flex items-center gap-3 text-xl"><span class="lux-gold">⏱</span> Day 02 💰</h3>
+                      <div class="mt-4 text-muted-foreground">
+                        <p class="font-semibold text-foreground">Money Make More Money</p>
+                        <p class="mt-2">টাকা দিয়ে টাকা ইনকাম করার সিক্রেট সূত্র</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 10: WHAT YOU’LL GET (Value Stack) -->
+        <!-- ========================= -->
+        <section class="lux-section">
+          <div class="lux-container">
+            <div class="mx-auto max-w-4xl">
+              <div class="reveal-fade" data-state="out">
+                <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">আপনি যা পাবেন</h2>
+              </div>
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-border bg-card/60 p-5">
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                      <div>
+                        <p class="font-semibold">২ দিনের লাইভ কোর্স</p>
+                        <p class="mt-1 text-sm text-muted-foreground">কনভার্সন-ফোকাসড শেখানো হবে—কম কথায়, কাজে বেশি।</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-border bg-card/60 p-5">
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                      <div>
+                        <p class="font-semibold">বাস্তব উদাহরণ ও প্র্যাকটিক্যাল টিপস</p>
+                        <p class="mt-1 text-sm text-muted-foreground">কনভার্সন-ফোকাসড শেখানো হবে—কম কথায়, কাজে বেশি।</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-border bg-card/60 p-5">
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                      <div>
+                        <p class="font-semibold">সম্পূর্ণ Action-Ready Blueprint</p>
+                        <p class="mt-1 text-sm text-muted-foreground">কনভার্সন-ফোকাসড শেখানো হবে—কম কথায়, কাজে বেশি।</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-border bg-card/60 p-5">
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                      <div>
+                        <p class="font-semibold">৫০০ টাকার কুপন</p>
+                        <p class="mt-1 text-sm text-muted-foreground">কনভার্সন-ফোকাসড শেখানো হবে—কম কথায়, কাজে বেশি।</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal-scale" data-state="out">
+                  <div class="lux-card lux-card-hover border-border bg-card/60 p-5">
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 h-5 w-5 lux-gold">✔</span>
+                      <div>
+                        <p class="font-semibold">সমমনা বিজনেসম্যান কমিউনিটি এক্সেস</p>
+                        <p class="mt-1 text-sm text-muted-foreground">কনভার্সন-ফোকাসড শেখানো হবে—কম কথায়, কাজে বেশি।</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 11: TIME & SCHEDULE -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="reveal-scale" data-state="out">
+              <div class="lux-card border-primary/25">
+                <div class="p-6 sm:p-10">
+                  <div class="mx-auto max-w-3xl text-center">
+                    <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">সময় ও শিডিউল</h2>
+                    <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                      <div class="rounded-xl border border-primary/15 bg-card/30 p-5 backdrop-blur-lg supports-[backdrop-filter]:bg-card/25">
+                        <div class="text-sm text-muted-foreground">🕗 সময়</div>
+                        <div class="mt-1 text-xl font-extrabold"><span class="lux-number">রাত ৮টা</span></div>
+                      </div>
+                      <div class="rounded-xl border border-primary/15 bg-card/30 p-5 backdrop-blur-lg supports-[backdrop-filter]:bg-card/25">
+                        <div class="text-sm text-muted-foreground">📅 দিন</div>
+                        <div class="mt-1 text-xl font-extrabold">বৃহস্পতিবার ও শুক্রবার</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 12: PRICING & OFFER -->
+        <!-- ========================= -->
+        <section id="pricing" class="lux-section">
+          <div class="lux-container">
+            <div class="mx-auto max-w-4xl">
+              <div class="text-center">
+                <div class="reveal-fade" data-state="out">
+                  <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">প্রাইসিং</h2>
+                  <p class="mt-2 text-muted-foreground">সীমিত সময়ের অফার—শেষ হলেই Regular Price ফিরে যাবে।</p>
+                </div>
+              </div>
+
+              <div class="mt-8 grid gap-5 sm:grid-cols-5">
+                <div class="reveal-scale sm:col-span-2" data-state="out">
+                  <div class="lux-card lux-card-hover border-border">
+                    <div class="p-6">
+                      <div class="text-sm text-muted-foreground">Regular Price</div>
+                      <div class="mt-2 text-3xl font-extrabold line-through text-muted-foreground">
+                        <span class="lux-number">৩,৫০০</span> টাকা
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reveal-scale sm:col-span-3" data-state="out">
+                  <div class="lux-card border-primary/30">
+                    <div class="p-6">
+                      <div class="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                          <div class="text-sm text-muted-foreground sm:animate-none animate-pulse-soft">Limited Time Offer</div>
+                          <div class="mt-2 text-4xl font-extrabold">
+                            <span class="lux-gold lux-number">১৯০</span> টাকা
+                          </div>
+                        </div>
+                        <a
+                          href="#enroll"
+                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] active:scale-[0.95] h-12 rounded-xl px-8"
+                        >
+                          এখনই এনরোল করুন
+                        </a>
+                      </div>
+                      <div class="my-5 h-px w-full bg-border" aria-hidden="true"></div>
+                      <p class="text-base font-semibold">
+                        “১৯০ টাকাটা খরচ নয় — এটা আপনার বিজনেসের প্রথম <span class="lux-gold">সিদ্ধান্ত</span>।”
+                      </p>
+                      <p class="mt-3 text-sm text-muted-foreground">Seats are LIMITED — Offer শেষ হলে ফিরবে Regular Price</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 12.1: INLINE CTA (mobile-only in React) -->
+        <section id="inline-cta-pricing" class="sm:hidden">
+          <div class="lux-container">
+            <div class="lux-card border-primary/20 bg-secondary/25 p-4 my-0 py-[23px]">
+              <div class="flex items-center justify-between gap-4">
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold tracking-[0.01em]">সিদ্ধান্তটা লক করুন</p>
+                  <p class="mt-1 whitespace-normal text-xs leading-snug text-muted-foreground my-0">
+                    এখনই এনরোল করে আপনার ফোকাস লক করুন।
+                  </p>
+                </div>
+                <a
+                  href="#enroll"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-[transform,opacity,box-shadow,background-color,color,border-color] duration-200 ease-out active:scale-[0.98] bg-cta text-cta-foreground shadow-[var(--shadow-cta)] hover:bg-cta/92 hover:scale-[1.03] active:scale-[0.95] h-10 shrink-0 rounded-xl px-4"
+                >
+                  এখনই এনরোল করুন
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 13: FINAL PHILOSOPHY CLOSE -->
+        <!-- ========================= -->
+        <section class="lux-section pt-0">
+          <div class="lux-container">
+            <div class="reveal" data-state="out">
+              <div class="mx-auto max-w-3xl">
+                <p class="lux-body text-lg sm:text-xl my-[26px]">
+                  যারা শিখে নেয়, তারাই বিজয়ী হয়।
+                  <br />
+                  খেলা এখন পুঁজির না —
+                  <br />
+                  খেলা <span class="lux-gold font-extrabold">সিস্টেম + স্কিলের</span>।
+                </p>
+                <p class="lux-body mt-6 text-base text-muted-foreground sm:text-lg">
+                  আপনার টাকাকে টাকা বানাতে দিন।
+                  <br />
+                  নিজেকে টাকা কামানোর মেশিন নয় —
+                  <br />
+                  সিস্টেমের প্লেয়ার বানান।
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- SECTION 14: ENROLL (React form cannot run in pure HTML) -->
+        <!-- ========================= -->
+        <section id="enroll" class="lux-section">
+          <div class="lux-container">
+            <div class="mx-auto grid max-w-4xl gap-8 sm:grid-cols-5">
+              <div class="sm:col-span-2">
+                <div class="reveal" data-state="out">
+                  <h2 class="lux-h2 text-2xl font-extrabold sm:text-3xl">এখনই সিদ্ধান্ত নিন</h2>
+                  <p class="lux-body mt-3 text-muted-foreground">
+                    মাত্র <span class="lux-gold font-bold">১৯০ টাকায়</span> শুরু করুন।
+                    <br />
+                    ২ দিনে আপনার অফার/প্রেজেন্টেশন/মার্কেটিং গেম বদলে দিন।
+                  </p>
+                </div>
+
+                <div class="reveal-scale mt-6 rounded-xl border border-primary/25 bg-primary/10 p-5" data-state="out">
+                  <div class="text-sm text-muted-foreground">Quick Summary</div>
+                  <ul class="mt-3 grid gap-2 text-sm text-muted-foreground">
+                    <li>• লাইভ + প্র্যাকটিক্যাল গাইড</li>
+                    <li>• Action-ready blueprint</li>
+                    <li>• Limited seats</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <div class="reveal-scale" data-state="out">
+                  <!--
+                    React EnrollForm placeholder:
+                    - In the Lovable/React app, this is a validated React Hook Form component.
+                    - In standalone HTML, you need either a plain HTML form or embed an external form.
+                    - If you want, tell me your desired action URL and fields, and I’ll generate a pure HTML version.
+                  -->
+                  <div class="lux-card border-primary/25 p-6">
+                    <h3 class="lux-h2 text-xl tracking-[0.01em]">এনরোল ফর্ম</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">(Placeholder — replace with your hosted form)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="pb-24 sm:pb-10">
+        <div class="lux-container">
+          <div class="lux-divider" aria-hidden="true"></div>
+          <p class="mt-6 text-xs text-muted-foreground text-center">© 2026 — Thinkers Academy. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Minimal “RevealOnce” behavior (one-time IntersectionObserver) -->
+    <script>
+      (function () {
+        try {
+          var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          var nodes = document.querySelectorAll(".reveal, .reveal-fade, .reveal-scale");
+          if (reduce) {
+            nodes.forEach(function (n) {
+              n.setAttribute("data-state", "in");
+            });
+            return;
+          }
+
+          if (!("IntersectionObserver" in window)) {
+            nodes.forEach(function (n) {
+              n.setAttribute("data-state", "in");
+            });
+            return;
+          }
+
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.setAttribute("data-state", "in");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.18, rootMargin: "0px 0px -12% 0px" }
+          );
+
+          nodes.forEach(function (n) {
+            n.setAttribute("data-state", "out");
+            io.observe(n);
+          });
+        } catch (e) {
+          // no-op
+        }
+      })();
+    </script>
+  </body>
+</html>
