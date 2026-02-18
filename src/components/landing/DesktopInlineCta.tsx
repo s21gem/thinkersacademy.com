@@ -18,13 +18,13 @@ export function DesktopInlineCta({
         <div className="lux-card border-primary/20 bg-secondary/25 p-6 py-[23px] my-0 mb-[35px] mt-0">
           <div className="flex items-center justify-between gap-6">
             <div className="min-w-0">
-              <p className="text-base font-semibold tracking-[0.01em]">{title}</p>
-              <p className="mt-1 text-sm leading-snug text-muted-foreground">
+              <p className="sm:text-2xl font-semibold tracking-[0.01em]">{title}</p>
+              <p className="mt-1 text-sm sm:text-xl leading-snug text-muted-foreground">
                 এখনই এনরোল করে আপনার ফোকাস লক করুন।
               </p>
             </div>
 
-            <Button variant="cta" size="lg" className="h-12 shrink-0 rounded-xl px-7 shadow-none hover:shadow-[var(--shadow-cta)]" onClick={onClick}>
+            <Button variant="cta" size="lg" className="h-12 shrink-0 rounded-xl px-7 font-buttonal shadow-none hover:shadow-[var(--shadow-cta)]" onClick={onClick}>
               {label}
             </Button>
           </div>

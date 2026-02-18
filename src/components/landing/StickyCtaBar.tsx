@@ -28,7 +28,7 @@ export function StickyCtaBar({ onEnrollClick, label, visible, minimized }: Stick
           <Button
             variant="cta"
             size="lg"
-            className="ml-auto h-11 w-full rounded-xl px-5"
+            className="ml-auto h-11 w-full font-buttonal rounded-xl px-5"
             onClick={onEnrollClick}
           >
             {label}

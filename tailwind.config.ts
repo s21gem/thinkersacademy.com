@@ -13,10 +13,29 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["var(--font-body)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial"],
-        display: ["var(--font-display)", "ui-serif", "Georgia", "Times New Roman", "serif"],
-      },
+  fontFamily: {
+    sans: [
+      "var(--font-body)",
+      "ui-sans-serif",
+      "system-ui",
+      "-apple-system",
+      "Segoe UI",
+      "Roboto",
+      "Arial",
+    ],
+
+    display: [
+      "var(--font-display)",
+      "ui-serif",
+      "Georgia",
+      "Times New Roman",
+      "serif",
+    ],
+
+    // ✅ NEW HERO FONT
+    hero: ["'Hind Siliguri'", "sans-serif"],
+    buttonal: ["'Ekush'", "serif"],
+  },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

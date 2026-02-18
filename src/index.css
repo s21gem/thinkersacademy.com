@@ -21,8 +21,8 @@ All colors MUST be HSL.
     --cta-foreground: 0 0% 98%;
 
     /* Typography (Bangla-first, luxury contrast) */
-    --font-display: "Noto Serif Bengali", "Hind Siliguri", "Noto Sans Bengali", ui-serif;
-    --font-body: "Noto Sans Bengali", "Hind Siliguri", ui-sans-serif;
+    --font-display: 'Hind Siliguri', ui-sans-serif;
+  --font-body: 'Hind Siliguri', ui-sans-serif;
 
     /* Effects */
     --shadow-lux: 0 18px 55px -22px hsl(var(--premium) / 0.35);
@@ -173,7 +173,7 @@ All colors MUST be HSL.
   }
 
   .lux-number {
-    @apply font-extrabold tracking-tight;
+    @apply font-bold tracking-tight;
   }
 
   /* Bangla highlight: gold + subtle underline accent */

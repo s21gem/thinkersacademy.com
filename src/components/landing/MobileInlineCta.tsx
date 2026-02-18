@@ -26,7 +26,7 @@ export function MobileInlineCta({
             <Button
               variant="cta"
               size="sm"
-              className="h-10 shrink-0 rounded-xl px-4 shadow-none hover:shadow-[var(--shadow-cta)]"
+              className="h-10 shrink-0 rounded-xl font-buttonal px-4 shadow-none hover:shadow-[var(--shadow-cta)]"
               onClick={onClick}
             >
               {label}
