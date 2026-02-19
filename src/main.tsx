@@ -4,19 +4,27 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(<App />);
 
-// 🔥 Send height to parent (WordPress)
-function sendHeight() {
-  const height = document.documentElement.scrollHeight;
+// ✅ Robust height sender
+const sendHeight = () => {
+  const height =
+    document.body.scrollHeight ||
+    document.documentElement.scrollHeight;
+
   window.parent.postMessage(
-    { type: "SET_IFRAME_HEIGHT", height },
+    {
+      type: "SET_IFRAME_HEIGHT",
+      height: height,
+    },
     "*"
   );
-}
+};
 
-// Run on load + resize + content change
+// Fire multiple times (important)
 window.addEventListener("load", sendHeight);
 window.addEventListener("resize", sendHeight);
 
-// Optional: slight delay for fonts/images
-setTimeout(sendHeight, 500);
-setTimeout(sendHeight, 1200);
+// Delay for fonts/images/animations
+setTimeout(sendHeight, 300);
+setTimeout(sendHeight, 800);
+setTimeout(sendHeight, 1500);
+setTimeout(sendHeight, 2500);
