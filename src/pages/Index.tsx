@@ -682,14 +682,14 @@ const Index = () => {
 </section>
         </main>
 
-        {/*<footer className="pb-24 sm:pb-10">
+        <footer className="pb-24 sm:pb-10">
           <div className="lux-container">
             <div className="lux-divider" />
             <p className="mt-6 text-xs text-muted-foreground text-center">
               © {new Date().getFullYear()} — Thinkers Academy. All rights reserved.
             </p>
           </div>
-        </footer>*/}
+        </footer>
       </div>
     </div>;
 };
