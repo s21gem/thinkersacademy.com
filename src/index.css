@@ -8,6 +8,7 @@ All colors MUST be HSL.
 html, body {
   overflow-x: hidden;
 }
+
 @layer base {
   :root {
     /* Luxury Dark (Bangla course landing) */
@@ -347,3 +348,10 @@ html, body {
     }
   }
 }
+/* ===== Page Exit Animation ===== */
+.page-exit {
+  opacity: 0;
+  transform: scale(0.985);
+  transition: all 0.28s ease;
+}
+
