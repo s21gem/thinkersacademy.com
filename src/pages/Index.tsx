@@ -684,6 +684,43 @@ const Index = () => {
   </div>
 </section>
 
+{/* CHECKOUT SECTION */}
+<section id="checkout" className="lux-section pt-10">
+  <div className="lux-container">
+    <div className="mx-auto max-w-4xl">
+
+      <div
+        className="
+          rounded-2xl
+          border border-primary/25
+          bg-card/40
+          backdrop-blur-xl
+          shadow-[0_25px_80px_-35px_hsl(var(--premium)/0.25)]
+          overflow-hidden
+        "
+      >
+        <div className="p-5 sm:p-7 text-center">
+          <h2 className="lux-h2 text-2xl sm:text-3xl font-semibold">
+            এনরোলমেন্ট সম্পন্ন করুন
+          </h2>
+          <p className="text-muted-foreground mt-2">
+            নিরাপদ পেমেন্টের মাধ্যমে আপনার সিট নিশ্চিত করুন
+          </p>
+        </div>
+
+        <div className="lux-divider" />
+
+        <iframe
+          src="https://thinkersacademybd.com/step/msvp/"
+          className="w-full h-[900px] sm:h-[1000px]"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
         </main>
 
         {/*<footer className="pb-24 sm:pb-10">
