@@ -33,7 +33,7 @@ const Index = () => {
   document.body.classList.add("page-exit");
 
   setTimeout(() => {
-    window.location.href = "https://thinkersacademybd.com/step/msvp/";
+    window.location.href = "https://checkout.thinkersacademybd.com/step/msvp/";
   }, 280);
 };
 
